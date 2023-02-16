@@ -2,12 +2,18 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://jitpack.io"
+        }
     }
 }
 
 repositories {
     google()
     mavenCentral()
+    maven {
+        url "https://jitpack.io"
+    }
 }
 
 apply plugin: 'com.android.application'
@@ -31,7 +37,7 @@ android {
 
 dependencies {
     implementation project(':android-pdf-viewer')
-    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'org.androidannotations:androidannotations-api:4.6.0'
     annotationProcessor "org.androidannotations:androidannotations:4.6.0"
 }
